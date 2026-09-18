@@ -13,9 +13,7 @@ nextEnv.loadEnvConfig(process.cwd());
 const saleorSchemaUrl = process.env.NEXT_PUBLIC_SALEOR_API_URL;
 
 if (!saleorSchemaUrl) {
-	throw new Error(
-		"NEXT_PUBLIC_SALEOR_API_URL is required to lint GraphQL documents. Set it in .env.local.",
-	);
+	throw new Error("NEXT_PUBLIC_SALEOR_API_URL is required to lint GraphQL documents. Set it in .env.local.");
 }
 
 const graphqlConfigBlock = {
@@ -85,7 +83,7 @@ const PREFETCH_TRUE_MESSAGE =
 const config = [
 	...nextVitals,
 	{
-		ignores: [".next/**", "out/**", "build/**", "next-env.d.ts"],
+		ignores: [".next/**", ".pnpm-store/**", "out/**", "build/**", "next-env.d.ts"],
 	},
 	{
 		files: ["src/**/*.{ts,tsx}"],

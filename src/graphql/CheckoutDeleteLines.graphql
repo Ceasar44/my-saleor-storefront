@@ -4,6 +4,7 @@ mutation CheckoutDeleteLines($checkoutId: ID!, $lineIds: [ID!]!) {
 			id
 			lines {
 				id
+				quantity
 			}
 			channel {
 				slug

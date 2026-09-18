@@ -34,6 +34,8 @@ describe("configurator seed sync", () => {
 		const expected = buildStorefrontContentSnapshotFromYaml(yamlSource);
 		const actual = JSON.parse(readFileSync(SNAPSHOT_PATH, "utf8")) as typeof expected;
 		expect(actual).toEqual(expected);
-		expect(readFileSync(SNAPSHOT_PATH, "utf8")).toBe(formatStorefrontContentSnapshotJson(expected));
+		expect(readFileSync(SNAPSHOT_PATH, "utf8").replace(/\r\n/g, "\n")).toBe(
+			formatStorefrontContentSnapshotJson(expected),
+		);
 	});
 });

@@ -116,7 +116,7 @@ for (const file of files) {
 	const path = join(rulesDir, file);
 	const raw = readFileSync(path, "utf8");
 
-	if (raw.startsWith("---\n")) {
+	if (/^---\r?\n/.test(raw)) {
 		continue; // already has frontmatter — leave it; hand-edits win
 	}
 

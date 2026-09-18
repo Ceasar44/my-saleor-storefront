@@ -6,6 +6,7 @@ query ProductVariantForPdp($id: ID, $sku: String, $channel: String!, $languageCo
 		...VariantDetails
 		product {
 			id
+			name
 			slug
 		}
 	}

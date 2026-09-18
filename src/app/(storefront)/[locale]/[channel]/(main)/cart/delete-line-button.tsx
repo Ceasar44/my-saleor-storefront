@@ -6,7 +6,7 @@ import { ariaDisabledClassName } from "@/ui/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type Props = {
-	deleteLine: () => Promise<void>;
+	deleteLine: () => Promise<unknown>;
 };
 
 export const DeleteLineButton = ({ deleteLine }: Props) => {

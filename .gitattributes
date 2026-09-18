@@ -1,0 +1,3 @@
+# Vite's test loader must strip the CLI shebang before evaluating this module.
+# A CRLF shebang is not stripped by the installed loader on Windows.
+scripts/analyze-storefront-har.mjs text eol=lf

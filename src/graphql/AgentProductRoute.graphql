@@ -1,0 +1,9 @@
+query AgentProductRoute($id: ID!, $channel: String!, $languageCode: LanguageCodeEnum!) {
+	product(id: $id, channel: $channel) {
+		id
+		slug
+		translation(languageCode: $languageCode) {
+			slug
+		}
+	}
+}

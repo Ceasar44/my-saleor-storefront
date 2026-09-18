@@ -1,4 +1,5 @@
 "use client";
+import { AgentTargetBridge } from "@/agent/state/target-bridge";
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
@@ -142,7 +143,7 @@ export function CartDrawer({
 	const currency = totalPrice?.gross.currency ?? localeConfig.fallbackCurrency;
 	const intlLocale = resolveLocaleFromSlug(localeSlug).bcp47;
 
-	const runCartMutation = (mutation: () => Promise<void>) => {
+	const runCartMutation = (mutation: () => Promise<unknown>) => {
 		setIsCartBusy(true);
 		void mutation().finally(() => {
 			// This tab re-renders via `refresh()` inside the action; other tabs
@@ -184,6 +185,7 @@ export function CartDrawer({
 	return (
 		<Sheet open={isOpen} onOpenChange={(open) => !open && closeCart()}>
 			<SheetContent side="right" className="flex flex-col p-0">
+				<AgentTargetBridge target="cart" active={isOpen} />
 				{/* Header */}
 				<SheetHeader className="justify-between border-b border-border px-6 py-4">
 					<div className="flex items-center gap-3">

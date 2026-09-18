@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { AgentTargetBridge } from "@/agent/state/target-bridge";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { type Metadata } from "next";
@@ -35,6 +36,7 @@ export async function generateMetadata(props: {
 export default function Page(props: { params: Promise<{ locale: string; channel: string }> }) {
 	return (
 		<section className="container-content py-8">
+			<AgentTargetBridge target="cart" whenCartClosed />
 			<Suspense fallback={<CartSkeleton />}>
 				<CartContent params={props.params} />
 			</Suspense>

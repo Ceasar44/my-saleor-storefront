@@ -632,5 +632,27 @@
 			"paymentWebhookFailed": "Webhook der Zahlungs-App fehlgeschlagen. Prüfen Sie im Saleor Dashboard → Apps → Dummy Payment App, ob Webhook-Zustellungen erfolgreich sind.",
 			"paymentInitFailed": "Zahlung konnte nicht initialisiert werden. Prüfen Sie, ob die Zahlungs-App in Saleor läuft."
 		}
+	},
+	"agent": {
+		"title": "Einkaufsassistent",
+		"description": "Hilfe zu Produkten und Warenkorb",
+		"newConversation": "Neues Gespr?ch",
+		"close": "Schlie?en",
+		"messages": "Gespr?ch",
+		"welcome": "Wie kann ich helfen?",
+		"input": "Nachricht",
+		"placeholder": "Frage zu diesem Produkt?",
+		"send": "Senden",
+		"stop": "Stoppen",
+		"confirm": "Best?tigen",
+		"reject": "Abbrechen",
+		"confirmAction": "Bitte best?tige diese Aktion.",
+		"toolDone": "Erledigt.",
+		"toolFailed": "Die Aktion konnte nicht abgeschlossen werden.",
+		"working": "Wird bearbeitet?",
+		"unavailable": "Der Assistent ist nicht verf?gbar. Bitte erneut versuchen.",
+		"addItem": "Artikel zum Warenkorb hinzuf?gen",
+		"removeItem": "Artikel aus dem Warenkorb entfernen",
+		"changeQuantity": "Artikelmenge ?ndern"
 	}
 }

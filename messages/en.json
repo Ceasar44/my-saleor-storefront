@@ -631,5 +631,27 @@
 			"paymentWebhookFailed": "Payment app webhook failed. In Saleor Dashboard → Apps → Dummy Payment App, check webhook deliveries are succeeding.",
 			"paymentInitFailed": "Payment could not be initialized. Check that the payment app is running in Saleor."
 		}
+	},
+	"agent": {
+		"title": "Shopping assistant",
+		"description": "Help with products and your bag",
+		"newConversation": "New conversation",
+		"close": "Close",
+		"messages": "Conversation",
+		"welcome": "How can I help you today?",
+		"input": "Message",
+		"placeholder": "Ask about this product?",
+		"send": "Send",
+		"stop": "Stop",
+		"confirm": "Confirm",
+		"reject": "Cancel",
+		"confirmAction": "Please confirm this action.",
+		"toolDone": "Done.",
+		"toolFailed": "The action could not be completed.",
+		"working": "Working?",
+		"unavailable": "The assistant is unavailable. Please try again.",
+		"addItem": "Add an item to your bag",
+		"removeItem": "Remove an item from your bag",
+		"changeQuantity": "Change the item quantity"
 	}
 }

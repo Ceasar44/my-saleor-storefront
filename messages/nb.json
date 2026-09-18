@@ -632,5 +632,27 @@
 			"paymentWebhookFailed": "Webhook for betalingsappen mislyktes. I Saleor Dashboard → Apps → Dummy Payment App, sjekk at webhook-leveranser lykkes.",
 			"paymentInitFailed": "Betalingen kunne ikke initialiseres. Sjekk at betalingsappen kjører i Saleor."
 		}
+	},
+	"agent": {
+		"title": "Handleassistent",
+		"description": "Hjelp med produkter og handlekurven",
+		"newConversation": "Ny samtale",
+		"close": "Lukk",
+		"messages": "Samtale",
+		"welcome": "Hva kan jeg hjelpe deg med?",
+		"input": "Melding",
+		"placeholder": "Sp?r om dette produktet?",
+		"send": "Send",
+		"stop": "Stopp",
+		"confirm": "Bekreft",
+		"reject": "Avbryt",
+		"confirmAction": "Bekreft denne handlingen.",
+		"toolDone": "Ferdig.",
+		"toolFailed": "Handlingen kunne ikke fullf?res.",
+		"working": "Arbeider?",
+		"unavailable": "Assistenten er utilgjengelig. Pr?v igjen.",
+		"addItem": "Legg en vare i handlekurven",
+		"removeItem": "Fjern en vare fra handlekurven",
+		"changeQuantity": "Endre antall"
 	}
 }

@@ -1,0 +1,24 @@
+{
+	"description": "Fixed v1 vector computed independently with Python stdlib; test-only keys",
+	"keyBase64": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8=",
+	"body": "{\"threadId\":\"thread_test\",\"messages\":[{\"role\":\"user\",\"content\":\"你好\\nworld\"}]}",
+	"claims": {
+		"iss": "paper-storefront",
+		"aud": "agent-adapter",
+		"iat": 1700000000,
+		"exp": 1700000060,
+		"jti": "550e8400-e29b-41d4-a716-446655440001",
+		"scope": {
+			"tenant_id": "tenant-1",
+			"store_id": "store-1"
+		},
+		"identity": {
+			"visitor_id": "visitor_550e8400-e29b-41d4-a716-446655440000",
+			"status": "authenticated",
+			"saleor_user_id": "VXNlcjox"
+		}
+	},
+	"bodySha256": "3260a955af9fc0aa311a5524e4bdd62247dabfd16a50a039d68d84969e372062",
+	"signingInput": "v1\nkey-1\nPOST\n/api/agent\n3260a955af9fc0aa311a5524e4bdd62247dabfd16a50a039d68d84969e372062\neyJpc3MiOiJwYXBlci1zdG9yZWZyb250IiwiYXVkIjoiYWdlbnQtYWRhcHRlciIsImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoxNzAwMDAwMDYwLCJqdGkiOiI1NTBlODQwMC1lMjliLTQxZDQtYTcxNi00NDY2NTU0NDAwMDEiLCJzY29wZSI6eyJ0ZW5hbnRfaWQiOiJ0ZW5hbnQtMSIsInN0b3JlX2lkIjoic3RvcmUtMSJ9LCJpZGVudGl0eSI6eyJ2aXNpdG9yX2lkIjoidmlzaXRvcl81NTBlODQwMC1lMjliLTQxZDQtYTcxNi00NDY2NTU0NDAwMDAiLCJzdGF0dXMiOiJhdXRoZW50aWNhdGVkIiwic2FsZW9yX3VzZXJfaWQiOiJWWE5sY2pveCJ9fQ",
+	"authorization": "v1.key-1.eyJpc3MiOiJwYXBlci1zdG9yZWZyb250IiwiYXVkIjoiYWdlbnQtYWRhcHRlciIsImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoxNzAwMDAwMDYwLCJqdGkiOiI1NTBlODQwMC1lMjliLTQxZDQtYTcxNi00NDY2NTU0NDAwMDEiLCJzY29wZSI6eyJ0ZW5hbnRfaWQiOiJ0ZW5hbnQtMSIsInN0b3JlX2lkIjoic3RvcmUtMSJ9LCJpZGVudGl0eSI6eyJ2aXNpdG9yX2lkIjoidmlzaXRvcl81NTBlODQwMC1lMjliLTQxZDQtYTcxNi00NDY2NTU0NDAwMDAiLCJzdGF0dXMiOiJhdXRoZW50aWNhdGVkIiwic2FsZW9yX3VzZXJfaWQiOiJWWE5sY2pveCJ9fQ.JVAVGehSsbGNdOCeIdTO1RFfqIgAn9PonHQtneUrYRE"
+}

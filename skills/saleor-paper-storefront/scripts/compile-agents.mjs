@@ -177,7 +177,7 @@ function buildBody() {
 		parts.push("");
 
 		for (const rule of section.rules) {
-			const raw = readFileSync(join(rulesDir, rule.file), "utf8");
+			const raw = readFileSync(join(rulesDir, rule.file), "utf8").replace(/\r\n/g, "\n");
 			parts.push(`### ${rule.num} ${rule.title}`);
 			parts.push("");
 			parts.push(stripRuleTitle(raw).trimEnd());
@@ -262,7 +262,7 @@ ${footer}`;
 if (process.argv.includes("--check")) {
 	let current = "";
 	try {
-		current = readFileSync(outPath, "utf8");
+		current = readFileSync(outPath, "utf8").replace(/\r\n/g, "\n");
 	} catch {
 		// missing file → treated as drift below
 	}

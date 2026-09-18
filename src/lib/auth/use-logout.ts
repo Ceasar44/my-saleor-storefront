@@ -6,6 +6,9 @@ import { logout } from "@/app/actions";
 import { resolveBrowseLocaleSlugWithFallback } from "@/lib/browse-locale";
 import { bumpChromeVersion } from "@/lib/chrome-sync";
 import { buildStorefrontPath } from "@/lib/storefront-path";
+import { clearVisitorId } from "@/agent/identity/visitor";
+import { clearThreadId } from "@/agent/conversation/storage";
+import { isAgentEnabled } from "@/agent/config/agent";
 
 export type LogoutOptions = {
 	locale?: string;
@@ -21,6 +24,10 @@ export function useLogout() {
 	return useCallback(async (options?: LogoutOptions) => {
 		try {
 			await logout();
+			if (isAgentEnabled()) {
+				clearVisitorId();
+				clearThreadId();
+			}
 		} catch {
 			// Checkout detach / server cookie clear is best-effort.
 		}

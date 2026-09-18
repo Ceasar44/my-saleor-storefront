@@ -1,3 +1,4 @@
+import { AgentProductStateBridge } from "@/agent/state/product-state-bridge";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { type Metadata } from "next";
@@ -235,6 +236,10 @@ async function ProductShell({
 			{/* Next rejects openGraph.type "product" (E237). Hoist after the product
 			    exists so missing-slug 404s never advertise og:type=product. */}
 			<meta property="og:type" content="product" />
+			<AgentProductStateBridge
+				currency={currency}
+				product={{ id: product.id, slug: pickTranslatedSlug(product), name: product.name }}
+			/>
 			<CatalogIdentityBridge
 				kind="products"
 				primarySlug={product.slug}

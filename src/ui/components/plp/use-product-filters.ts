@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useMemo, useOptimistic, useTransition } from "react";
+import { useCallback, useEffect, useMemo, useOptimistic, useTransition } from "react";
+import { useOptionalAgent } from "@/agent/components/AIProvider";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { parseFacetParam } from "@/config/facets";
 import type { SortOption, ActiveFilter } from "./filter-bar";
@@ -73,6 +74,7 @@ export function useProductFilters({
 	enableCategoryFilter = false,
 	totalCount,
 }: UseProductFiltersOptions): UseProductFiltersResult {
+	const agentActions = useOptionalAgent()?.actions;
 	const router = useRouter();
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
@@ -177,6 +179,23 @@ export function useProductFilters({
 			setOptimisticSizes,
 			setOptimisticPriceRange,
 		],
+	);
+
+	useEffect(
+		() =>
+			agentActions?.register("setProductFilters", async (filters, signal) => {
+				if (signal?.aborted) return { success: false, error: "cancelled" };
+				if (
+					filters.sort &&
+					!["featured", "newest", "price_asc", "price_desc", "bestselling"].includes(String(filters.sort))
+				)
+					return { success: false, error: "invalid_arguments" };
+				if (filters.categories && !enableCategoryFilter)
+					return { success: false, error: "invalid_arguments" };
+				updateFilters(filters as Parameters<typeof updateFilters>[0]);
+				return { success: true, data: { applied: true } };
+			}),
+		[agentActions, enableCategoryFilter, updateFilters],
 	);
 
 	const handleCategoryToggle = useCallback(

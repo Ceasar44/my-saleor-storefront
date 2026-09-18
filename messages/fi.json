@@ -632,5 +632,27 @@
 			"paymentWebhookFailed": "Maksusovelluksen webhook epäonnistui. Tarkista Saleor-hallintapaneelissa → Sovellukset → Dummy Payment App, että webhook-toimitukset onnistuvat.",
 			"paymentInitFailed": "Maksua ei voitu alustaa. Tarkista, että maksusovellus on käynnissä Saleorissa."
 		}
+	},
+	"agent": {
+		"title": "Ostosavustaja",
+		"description": "Apua tuotteisiin ja ostoskoriin",
+		"newConversation": "Uusi keskustelu",
+		"close": "Sulje",
+		"messages": "Keskustelu",
+		"welcome": "Kuinka voin auttaa?",
+		"input": "Viesti",
+		"placeholder": "Kysy t?st? tuotteesta?",
+		"send": "L?het?",
+		"stop": "Pys?yt?",
+		"confirm": "Vahvista",
+		"reject": "Peruuta",
+		"confirmAction": "Vahvista t?m? toiminto.",
+		"toolDone": "Valmis.",
+		"toolFailed": "Toimintoa ei voitu suorittaa.",
+		"working": "K?sitell??n?",
+		"unavailable": "Avustaja ei ole k?ytett?viss?. Yrit? uudelleen.",
+		"addItem": "Lis?? tuote ostoskoriin",
+		"removeItem": "Poista tuote ostoskorista",
+		"changeQuantity": "Muuta m??r??"
 	}
 }
